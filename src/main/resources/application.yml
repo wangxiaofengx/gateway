@@ -1,0 +1,22 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+server:
+  port: 12345
+logging:
+  level:
+    root: info
+spring:
+  webflux:
+    base-path: '/sh'
+  redis:
+    host: 10.0.0.89
+    devtools:
+    restart:
+      enabled: false  #设置开启热部署
+      additional-paths: src/main/java #重启目录
+elasticsearch:
+  host: 172.16.103.249
+  port: 9200
